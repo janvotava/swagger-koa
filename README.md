@@ -9,7 +9,7 @@ __{swagger-koa}__ is a simple and clean solution to integrate swagger with koa.
 
 ## Installation
 
-    $ npm install -g swagger-koa
+    $ npm install swagger-koa
 
 ## Quick Start
 
