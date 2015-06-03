@@ -28,12 +28,16 @@
  *          required: true
  *          dataType: string
  */
-exports.login = function (req, res) {
-  var user = {};
-  user.username = req.param('username');
-  user.password = req.param('password');
-  res.json(user);
-}
+
+exports.login = function *() {
+  var user = {}
+    , query = this.request.query;
+
+  user.username = query.username;
+  user.password = query.password;
+
+  this.body = user;
+};
 
 /**
  * @swagger

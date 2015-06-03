@@ -1,20 +1,23 @@
 {
-  "name": "swagger-express",
-  "description": "Document your express rest api by jsDoc or yaml.",
+  "name": "swagger-koa",
+  "description": "Document your koa rest api by jsDoc or yaml.",
   "version": "1.0.4",
-  "author": "fliptoo <fliptoo.studio@gmail.com>, sposmen <sposmen@gmail.com>",
+  "author": "Jan Votava <jan@sensible.io>, fliptoo <fliptoo.studio@gmail.com>, sposmen <sposmen@gmail.com>",
   "main": "./index",
   "dependencies": {
-    "express": "3.5.1",
-    "underscore": "*",
+    "async": "~0.2.7",
+    "coffee-script": "*",
     "doctrine": "*",
     "js-yaml": "~2.1.0",
-    "coffee-script": "*",
-    "async": "~0.2.7"
+    "koa": "^0.21.0",
+    "koa-mount": "^1.3.0",
+    "koa-route": "^2.4.1",
+    "koa-static": "^1.4.9",
+    "underscore": "*"
   },
   "devDependencies": {
-    "jade": "*",
-    "jshint": "*"
+    "jshint": "*",
+    "koa-views": "^3.0.0"
   },
   "scripts": {
     "test": "jshint --config jshint.cfg $(find . -name *.js | grep -v './node_modules')"
@@ -22,7 +25,7 @@
   "keywords": [
     "swagger",
     "swagger-ui",
-    "express",
+    "koa",
     "api",
     "jsdoc",
     "yml",
@@ -30,5 +33,5 @@
     "coffee-script",
     "restful"
   ],
-  "repository": "git://github.com/fliptoo/swagger-express"
+  "repository": "git://github.com/cyner/swagger-koa"
 }

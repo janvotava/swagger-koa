@@ -1,19 +1,19 @@
-{swagger-express}
+{swagger-koa}
 =========
 
-[Swagger](https://developers.helloreverb.com/swagger/) is a specification and complete framework 
+[Swagger](https://developers.helloreverb.com/swagger/) is a specification and complete framework
 implementation for describing, producing, consuming, and visualizing RESTful web services.
 View [demo](http://petstore.swagger.wordnik.com/).
 
-__{swagger-express}__ is a simple and clean solution to integrate swagger with express.
+__{swagger-koa}__ is a simple and clean solution to integrate swagger with koa.
 
 ## Installation
 
-    $ npm install -g swagger-express
+    $ npm install -g swagger-koa
 
 ## Quick Start
 
-Configure {swagger-express} as express middleware.
+Configure {swagger-koa} as koa middleware.
 
 
 `apiVersion`      -> Your api version.
@@ -35,7 +35,7 @@ Configure {swagger-express} as express middleware.
 `middleware`      -> Function before response.
 
 ```
-var swagger = require('swagger-express');
+var swagger = require('swagger-koa');
 
 app.configure(function(){
   ...
@@ -47,8 +47,8 @@ app.configure(function(){
     swaggerUI: './public/swagger/',
     basePath: 'http://localhost:3000',
     info: {
-      title: 'swagger-express sample app',
-      description: 'Swagger + Express = {swagger-express}'
+      title: 'swagger-koa sample app',
+      description: 'Swagger + Koa = {swagger-koa}'
     },
     apis: ['./api.js', './api.yml'],
     middleware: function(req, res){}
@@ -81,7 +81,7 @@ Example 'api.js'
  *      notes: Returns a user based on username
  *      responseClass: User
  *      nickname: login
- *      consumes: 
+ *      consumes:
  *        - text/html
  *      parameters:
  *        - name: username
@@ -111,7 +111,7 @@ exports.login = function (req, res) {
  *       username:
  *         type: String
  *       password:
- *         type: String    
+ *         type: String
  */
 ```
 
@@ -122,7 +122,7 @@ Example 'api.yml'
 ```yml
 resourcePath: /api
 description: All about API
-apis: 
+apis:
 
 - path: /login
   operations:
@@ -132,7 +132,7 @@ apis:
     notes: Returns a user based on username
     responseClass: User
     nickname: login
-    consumes: 
+    consumes:
       - text/html
     parameters:
 
@@ -155,7 +155,7 @@ models:
         username:
           type: String
         password:
-          type: String    
+          type: String
 ```
 
 ## Read from jsdoc
@@ -210,26 +210,29 @@ Example 'api.coffee'
 
 ## Examples
 
-Clone the {swagger-express} repo, then install the dev dependencies:
+Clone the {swagger-koa} repo, then install the dev dependencies:
 
-    $ git clone git://github.com/fliptoo/swagger-express.git --depth 1
-    $ cd swagger-express
+    $ git clone git://github.com/cyner/swagger-koa.git --depth 1
+    $ cd swagger-koa
     $ npm install
 
 and run the example:
 
     $ cd example
-    $ node app.js
-    
+    $ node --harmony app.js
+
 # Credits
 
 - [Express](https://github.com/visionmedia/express)
+- [Koa](https://github.com/koajs/koa)
 - [swagger-jack](https://github.com/feugy/swagger-jack)
+- [swagger-express](https://github.com/fliptoo/swagger-express)
 
 ## License
 
 (The MIT License)
 
+Copyright (c) 2015 Jan Votava &lt;jan@sensible.io&gt;
 Copyright (c) 2013 Fliptoo &lt;fliptoo.studio@gmail.com&gt;
 
 Permission is hereby granted, free of charge, to any person obtaining
