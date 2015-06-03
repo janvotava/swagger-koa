@@ -32,8 +32,6 @@ Configure {swagger-koa} as koa middleware.
 
 `apis`            -> Define your api array.
 
-`middleware`      -> Function before response.
-
 ```
 var swagger = require('swagger-koa');
 
