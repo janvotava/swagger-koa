@@ -37,25 +37,20 @@ Configure {swagger-koa} as koa middleware.
 ```
 var swagger = require('swagger-koa');
 
-app.configure(function(){
+app.use(swagger.init({
+  apiVersion: '1.0',
+  swaggerVersion: '1.0',
+  swaggerURL: '/swagger',
+  swaggerJSON: '/api-docs.json',
+  swaggerUI: './public/swagger/',
+  basePath: 'http://localhost:3000',
+  info: {
+    title: 'swagger-koa sample app',
+    description: 'Swagger + Koa = {swagger-koa}'
+  },
+  apis: ['./api.js', './api.yml']
+}));
   ...
-  app.use(swagger.init(app, {
-    apiVersion: '1.0',
-    swaggerVersion: '1.0',
-    swaggerURL: '/swagger',
-    swaggerJSON: '/api-docs.json',
-    swaggerUI: './public/swagger/',
-    basePath: 'http://localhost:3000',
-    info: {
-      title: 'swagger-koa sample app',
-      description: 'Swagger + Koa = {swagger-koa}'
-    },
-    apis: ['./api.js', './api.yml'],
-    middleware: function(req, res){}
-  }));
-  app.use(app.router);
-  ...
-});
 ```
 
 [info]: https://github.com/wordnik/swagger-spec/blob/master/versions/1.2.md#513-info-object
