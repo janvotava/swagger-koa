@@ -1,9 +1,9 @@
 {swagger-koa}
 =========
 
-[Swagger](https://developers.helloreverb.com/swagger/) is a specification and complete framework
+[Swagger](http://swagger.io/specification/) is a specification and complete framework
 implementation for describing, producing, consuming, and visualizing RESTful web services.
-View [demo](http://petstore.swagger.wordnik.com/).
+View [demo](http://petstore.swagger.io/).
 
 __{swagger-koa}__ is a simple and clean solution to integrate swagger with koa.
 
