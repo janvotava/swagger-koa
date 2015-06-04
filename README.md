@@ -230,6 +230,7 @@ and run the example:
 (The MIT License)
 
 Copyright (c) 2015 Jan Votava &lt;jan@sensible.io&gt;
+
 Copyright (c) 2013 Fliptoo &lt;fliptoo.studio@gmail.com&gt;
 
 Permission is hereby granted, free of charge, to any person obtaining
