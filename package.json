@@ -4,6 +4,7 @@
   "version": "1.0.11",
   "author": "Jan Votava <jan@sensible.io>, fliptoo <fliptoo.studio@gmail.com>, sposmen <sposmen@gmail.com>",
   "main": "./index",
+  "license": "MIT",
   "dependencies": {
     "async": "~0.2.7",
     "coffee-script": "*",
