@@ -1,0 +1,16 @@
+{
+  "name": "swagger-koa-example",
+  "description": "Example project to test swagger-koa against.",
+  "version": "1.0.0",
+  "author": "Jan Votava <jan@sensible.io>, fliptoo <fliptoo.studio@gmail.com>, sposmen <sposmen@gmail.com>",
+  "dependencies": {
+    "jade": "^1.11.0",
+    "koa": "^2.5.0",
+    "koa-render": "^0.2.1",
+    "koa-route": "^3.2.0",
+    "koa-static": "^4.0.2"
+  },
+  "scripts": {
+    "start": "DEBUG=* node app.js"
+  }
+}
