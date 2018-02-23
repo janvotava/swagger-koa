@@ -16,10 +16,7 @@
     "underscore": "*"
   },
   "devDependencies": {
-    "jade": "^1.11.0",
-    "jshint": "*",
-    "koa-render": "^0.2.1",
-    "koa-views": "^3.0.0"
+    "jshint": "*"
   },
   "scripts": {
     "test": "jshint --config jshint.cfg $(find . -name *.js | grep -v './node_modules')"
