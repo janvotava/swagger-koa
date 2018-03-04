@@ -6,21 +6,18 @@
   "main": "./index",
   "license": "MIT",
   "dependencies": {
-    "async": "~0.2.7",
+    "async": "^2.6.0",
     "coffee-script": "*",
     "doctrine": "*",
-    "js-yaml": "~2.1.0",
-    "koa": "^0.21.0",
-    "koa-mount": "^1.3.0",
-    "koa-route": "^2.4.1",
-    "koa-static": "^1.4.9",
+    "js-yaml": "^3.10.0",
+    "koa": "^2.5.0",
+    "koa-mount": "^3.0.0",
+    "koa-route": "^3.2.0",
+    "koa-static": "^4.0.2",
     "underscore": "*"
   },
   "devDependencies": {
-    "jade": "^1.11.0",
-    "jshint": "*",
-    "koa-render": "^0.2.1",
-    "koa-views": "^3.0.0"
+    "jshint": "*"
   },
   "scripts": {
     "test": "jshint --config jshint.cfg $(find . -name *.js | grep -v './node_modules')"

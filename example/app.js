@@ -2,7 +2,7 @@
  * Module dependencies.
  */
 
-var koa = require('koa')
+var Koa = require('koa')
   , router = require('koa-route')
   , views = require('koa-render')
   , serve = require('koa-static')
@@ -10,7 +10,7 @@ var koa = require('koa')
   , path = require('path')
   , swagger = require('../');
 
-var app = koa(),
+var app = new Koa(),
     port = 3000;
 
 app.use(views('views', { default: 'jade' }));
@@ -27,8 +27,8 @@ app.use(swagger.init({
 
 app.use(serve(path.join(__dirname, 'public')));
 
-app.use(router.get('/', function *() {
-  this.body = yield this.render('index', { title: 'Koa' });
+app.use(router.get('/', async (ctx, next) => {
+  ctx.body = await ctx.render('index', { title: 'Koa' });
 }));
 
 app.use(router.post('/login', api.login));
