@@ -1,7 +1,7 @@
 {
   "name": "swagger-koa",
   "description": "Document your koa rest api by jsDoc or yaml.",
-  "version": "1.0.11",
+  "version": "2.0.0",
   "author": "Jan Votava <jan@sensible.io>, fliptoo <fliptoo.studio@gmail.com>, sposmen <sposmen@gmail.com>",
   "main": "./index",
   "license": "MIT",
